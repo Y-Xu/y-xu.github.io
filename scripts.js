@@ -1,8 +1,20 @@
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        menuToggle.classList.toggle('active');
+    
+    function toggleMenu() {
+        navLinks.classList.toggle('menu-open');
+        menuToggle.classList.toggle('menu-open');
+    }
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('menu-open')) {
+            toggleMenu();
+        }
     });
 });
