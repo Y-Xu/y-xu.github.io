@@ -3,57 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USTC Yang Xu</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Yang Xu - USTC</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <nav>
             <div class="nav-container">
-                <img src="img/ustc/ustc_logo.png" alt="USTC Logo" class="logo">
-                <div class="menu-toggle" id="mobile-menu">
+                <a href="#" class="logo-link">
+                    <img src="img/ustc/ustc_logo.png" alt="USTC Logo" class="logo">
+                </a>
+                <button class="menu-toggle" id="mobile-menu" aria-label="Toggle Navigation">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
                 <ul class="nav-links" id="nav-links" aria-label="Primary navigation">
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#news">News</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#teaching">Teaching</a></li>
-                    <li><a href="#students">Students</a></li>
-                    <li><a href="#hobby">Hobby</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="about">
-            <div class="card">
-                <div class="profile-section">
-                    <img src="your-photo.jpg" alt="Your Photo">
-                    <div class="profile-info">
-                        <h2>许杨（Yang Xu）</h2>
-                        <p>Institution: University of Science and Technology of China</p>
-                        <p>Email: xuyangcs@ustc.edu.cn</p>
-                        <p>Research Interests: Computer Science, Computer Networks, Edge Intelligence, Federated LLMs</p>
-                        <p><a href="https://scholar.google.com.hk/citations?user=4sgCOhwAAAAJ&hl=zh-CN&authuser=1" target="_blank" rel="noopener noreferrer" class="google-scholar"><i class="fab fa-google"></i> Google Scholar</a></p>
-                    </div>
+        <section id="about" class="card">
+            <div class="profile-section">
+                <img src="img/me/me.jpg" alt="Yang Xu" loading="lazy">
+                <div class="profile-info">
+                    <h2>Yang Xu</h2>
+                    <h3>Associate Researcher</h3>
+                    <p><a href="https://cs.ustc.edu.cn/main.htm" target="_blank" rel="noopener noreferrer">School of Computer Science and Technology</a></p>
+                    <p><a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener noreferrer">University of Science and Technology of China (USTC)</a></p>
+                    <p><a href="https://int-ustc.github.io/index.html" target="_blank" rel="noopener noreferrer">USTC Intelligent Network and System Group (USTC-INT)</a></p>
+                    <p>Email: xuyangcs@ustc.edu.cn</p>
+                    <p>Research Interests: Computer Networks, Edge Intelligence, Federated LLMs</p>
+                    <p>
+                        <a href="https://scholar.google.com.hk/citations?user=4sgCOhwAAAAJ&hl=zh-CN&authuser=1" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile" class="google-scholar">
+                            <i class="fab fa-google"></i> Google Scholar
+                        </a>
+                    </p>
                 </div>
-                <p>I am a associate researcher at University of Science and Technology of China, focusing on cutting-edge research in AI, edge intelligence, networking, and computer science. My goal is to advance knowledge in these areas through innovative, theory-backed research.</p>
             </div>
+            <p>Yang Xu is currently an Associate Researcher with the School of Computer Science and Technology, University of Science and Technology of China, and a member of the USTC-INT Group. He received the B.S. degree from the Wuhan University of Technology in 2014 and the Ph.D. degree in computer science and technology from the University of Science and Technology of China in 2019. His primary research interests include the Internet of Things, edge computing, federated learning, edge intelligence, and federated LLMs. His goal is to advance knowledge in these areas through innovative, theory-backed research.</p> 
         </section>
 
        <section id="news">
             <div class="card">
                 <h2><i class="fas fa-bell"></i> News</h2>
-                <p><strong>[October 2024]</strong> Selected as Keynote Speaker at the International Conference on Network Intelligence.</p>
-                <p><strong>[September 2024]</strong> Our latest paper on Federated Learning published in IEEE Transactions on Neural Networks.</p>
-                <p><strong>[August 2024]</strong> Invited to join the Editorial Board of the Journal of Edge Computing.</p>
+                <p><strong style="color:#2a9df4;">[Oct. 2024]</strong> One paper about training slimmable neural network with federated learning was accepted by ToN'24 (CCF A). Congratulations to Yunming!</p>
+                <p><strong style="color:#2a9df4;">[Aug. 2024]</strong> One National Science Foundation of China (NSFC) Project was granted!</p>
+                <p><strong style="color:#2a9df4;">[Jun. 2024]</strong> One paper about parallel split federated learning was accepted by ACM MobiCom 2024 (CCF A). Congratulations to Yunming!</p>
+                <p><strong style="color:#2a9df4;">[May 2024]</strong> One paper about asynchronous decentralized federated learning was accepted by ToN'24 (CCF A).Congratulations to Yunming!</p>
             </div>
         </section>
 
@@ -63,17 +69,37 @@
                 <div class="sub-section">
                     <h3>Conference Papers</h3>
                     <ul>
-                        <li><strong>John Doe, Jane Smith, Alice Johnson</strong>. "Efficient Algorithms for Federated Learning in Edge Environments". <em>NeurIPS 2024</em>.</li>
-                        <li><strong>John Doe, Jane Smith, Bob Brown</strong>. "Adaptive Models for Network-Centric AI Applications". <em>ICML 2023</em>.</li>
-                        <li><strong>John Doe, Jane Smith, Charlie Davis</strong>. "Distributed Learning for Edge Intelligence". <em>CVPR 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[ACM Mobicom'24]</strong> Yunming Liao, <strong>*Yang Xu</strong>, *Hongli Xu, Zhiwei Yao, Liusheng Huang, Chunming Qiao. "<strong style="color:#ff8c00;">ParallelSFL: A Novel Split Federated Learning Framework Tackling Heterogeneity Issues</strong>". <em>The 30th Annual International Conference On Mobile Computing And Networking (MobiCom), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE ICDE'24]</strong> Yunming Liao, <strong>*Yang Xu</strong>, Hongli Xu, Lun Wang, Zhiwei Yao, Chunming Qiao. "<strong style="color:#ff8c00;">MergeSFL: Split Federated Learning with Feature Merging and Batch Size Regulation</strong>". <em>IEEE International Conference on Data Engineering (ICDE), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE ICDE'24]</strong> Zhida Jiang, <strong>*Yang Xu</strong>, *Hongli Xu, Zhiyuan Wang, Chunming Qiao, "<strong style="color:#ff8c00;">Clients Help Clients: Alternating Collaboration for Semi-Supervised Federated Learning</strong>". <em>IEEE International Conference on Data Engineering (ICDE), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE ICDE'23]</strong> Min Chen, <strong>*Yang Xu, *Hongli Xu</strong>, Liusheng Huang, "<strong style="color:#ff8c00;">Enhancing Decentralized Federated Learning for Non-IID Data on Heterogenous Devices</strong>". <em>IEEE International Conference on Data Engineering (ICDE), 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE INFOCOM'23]</strong> Zhida Jiang, <strong>*Yang Xu</strong>, *Hongli Xu, Zhiyuan Wang, Chen Qian, "<strong style="color:#ff8c00;">Heterogeneity-Aware Federated Learning with Adaptive Client Selection and Gradient Compression</strong>". <em>INFOCOM, 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE INFOCOM'23]</strong> Yunming Liao, <strong>*Yang Xu</strong>, Hongli Xu, Lun Wang, Chen Qian, "<strong style="color:#ff8c00;">Adaptive Configuration for Heterogeneous Participants in Decentralized Federated Learning</strong>". <em>INFOCOM, 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE ICDE'22]</strong> Jianchun Liu, <strong>*Yang Xu</strong>, *Hongli Xu, Yunming Liao, Zhiyuan Wang, He Huang, "<strong style="color:#ff8c00;">Enhancing Federated Learning with Intelligent Model Migration in Heterogeneous Edge Computing</strong>". <em>IEEE International Conference on Data Engineering (ICDE), 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE ICDE'22]</strong> Zhida Jiang, <strong>*Yang Xu</strong>, *Hongli Xu, Zhiyuan Wang, Chunming Qiao, Yangming Zhao, "<strong style="color:#ff8c00;">FedMP: Federated Learning through Adaptive Model Pruning in Heterogeneous Edge Computing</strong>". <em>IEEE International Conference on Data Engineering (ICDE), 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE ICDE'22]</strong> Lun Wang, <strong>*Yang Xu</strong>, Hongli Xu, Jianchun Liu, Zhiyuan Wang, Liusheng Huang, "<strong style="color:#ff8c00;">Enhancing Federated Learning with In-Cloud Unlabeled Data</strong>". <em>IEEE International Conference on Data Engineering (ICDE), 2022</em>.</li>
                     </ul>
                 </div>
                 <div class="sub-section">
                     <h3>Journal Papers</h3>
                     <ul>
-                        <li><strong>John Doe, Jane Smith, Alice Johnson</strong>. "Dynamic Optimization for Edge Intelligence". <em>IEEE Transactions on Networking 2024</em>.</li>
-                        <li><strong>John Doe, Jane Smith, Bob Brown</strong>. "Federated Learning for Secure and Privacy-Preserving AI". <em>Journal of Computer Science 2023</em>.</li>
-                        <li><strong>John Doe, Jane Smith, Charlie Davis</strong>. "Real-Time Data Processing in Edge Computing". <em>ACM Transactions on Internet Technology 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE/ACM ToN'24]</strong> <strong>Yang Xu</strong>, Yunming Liao, *Hongli Xu, Zhiyuan Wang, Lun Wang, Jianchun Liu, Chen Qian, "<strong style="color:#ff8c00;">FedSNN: Training Slimmable Neural Network with Federated Learning in Edge Computing</strong>". <em>IEEE/ACM Transactions on Networking (ToN), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'24]</strong> <strong>Yang Xu</strong>, Yunming Liao, Lun Wang, *Hongli Xu, Zhida Jiang, Wuyang Zhang, "<strong style="color:#ff8c00;">Overcoming Noisy Labels and Non-IID Data in Edge Federated Learning</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE/ACM ToN'24]</strong> Yunming Liao, <strong>*Yang Xu</strong>, Hongli Xu, Min Chen, Lun Wang, Chunming Qiao, "<strong style="color:#ff8c00;">Asynchronous Decentralized Federated Learning for Heterogeneous Devices</strong>". <em>IEEE/ACM Transactions on Networking (ToN), 2024</em>.</li>					
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'24]</strong> Suo Chen, <strong>*Yang Xu</strong>, Hongli Xu, Zhenguo Ma, Zhiyuan Wang, "<strong style="color:#ff8c00;">Enhancing Decentralized and Personalized Federated Learning with Topology Construction</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'24]</strong> Zhida Jiang, <strong>*Yang Xu</strong>, Hongli Xu, Zhiyuan Wang, Jianchun Liu, Chunming Qiao, "<strong style="color:#ff8c00;">Semi-Supervised Decentralized Machine Learning with Device-to-Device Cooperation</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'24]</strong> Yunming Liao, <strong>*Yang Xu</strong>, Hongli Xu, Lun Wang, Chen Qian, Chunming Qiao, "<strong style="color:#ff8c00;">Decentralized Federated Learning with Adaptive Configuration for Heterogeneous Participants</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2024</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TPDS'23]</strong> Zhiyuan Wang, Hongli Xu, <strong>*Yang Xu</strong>, Zhida Jiang, Jianchun Liu, Suo Chen,"<strong style="color:#ff8c00;">FAST: Enhancing Federated Learning through Adaptive Data Sampling and Local Training</strong>". <em>IEEE Transactions on Parallel and Distributed Systems (TPDS), 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'23]</strong> <strong>Yang Xu</strong>, Zhida Jiang, *Hongli Xu, Zhiyuan Wang, Chen Qian, Chunming Qiao, Liusheng Huang "<strong style="color:#ff8c00;">Federated Learning with Client Selection and Gradient Compression in Heterogeneous Edge Systems</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'23]</strong> <strong>Yang Xu</strong>, *Zhenguo Ma, Hongli Xu, Suo Chen, Jianchun Liu, Yinxing Xue, "<strong style="color:#ff8c00;">FedLC: Accelerating Asynchronous Federated Learning in Edge Computing</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE/ACM ToN'23]</strong> Yunming Liao, <strong>*Yang Xu</strong>, Hongli Xu, Zhiwei Yao, Lun Wang, Chunming Qiao, "<strong style="color:#ff8c00;">Accelerating Federated Learning with Data and Model Parallelism in Edge Computing</strong>". <em>IEEE/ACM Transactions on Networking (ToN), 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TPDS'23]</strong> Zhida Jiang, <strong>*Yang Xu</strong>, Hongli Xu, Lun Wang, Chunming Qiao, Liusheng Huang, "<strong style="color:#ff8c00;">Joint Model Pruning and Topology Construction for Accelerating Decentralized Machine Learning</strong>". <em>IEEE Transactions on Parallel and Distributed Systems (TPDS), 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'23]</strong> <strong>Yang Xu</strong>, Lun Wang, Hongli Xu, Jianchun Liu, Zhiyuan Wang, Liusheng Huang, "<strong style="color:#ff8c00;">Enhancing Federated Learning with Server-Side Unlabeled Data by Adaptive Client and Data Selection</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2023</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'22]</strong> Zhenguo Ma, <strong>*Yang Xu</strong>, Hongli Xu, Jianchun Liu, Yinxing Xue, "<strong style="color:#ff8c00;">Like Attracts Like: Personalized Federated Learning in Decentralized Edge Computing</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'22]</strong> <strong>Yang Xu</strong>, *Wei Yang, Min Chen, Sheng Chen, and Liusheng Huang, "<strong style="color:#ff8c00;">Attention-Based Gait Recognition and Walking Direction Estimation in Wi-Fi Networks</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'22]</strong> Suo Chen, <strong>*Yang Xu</strong>, Hongli Xu, Zhida Jiang, Chunming Qiao, "<strong style="color:#ff8c00;">Decentralized Federated Learning with Intermediate Results in Mobile Edge Computing</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'22]</strong> <strong>Yang Xu</strong>, Yunming Liao, *Hongli Xu, Zhenguo Ma, Lun Wang, Jianchun Liu, "<strong style="color:#ff8c00;">Adaptive Control of Local Updating and Model Compression for Efficient Federated Learning</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2022</em>.</li>
+                        <li><strong style="color:#2a9df4;">[IEEE TMC'22]</strong> Lun Wang, <strong>*Yang Xu</strong>, Hongli Xu, Min Chen, Liusheng Huang, "<strong style="color:#ff8c00;">Accelerating Decentralized Federated Learning in Heterogeneous Edge Computing</strong>". <em>IEEE Transactions on Mobile Computing (TMC), 2022</em>.</li>
                     </ul>
                 </div>
             </div>
@@ -83,9 +109,10 @@
             <div class="card">
                 <h2><i class="fas fa-flask"></i> Projects</h2>
                 <ul>
-                    <li><strong>Project 1: Federated Learning for Autonomous Systems</strong> - Type: Research - Funding: National Science Foundation - Period: 2022-2025</li>
-                    <li><strong>Project 2: AI-Driven Edge Computing</strong> - Type: Industry Collaboration - Funding: XYZ Corporation - Period: 2021-2024</li>
-                    <li><strong>Project 3: Real-Time Data Analytics for Smart Cities</strong> - Type: Government Grant - Funding: City of New York - Period: 2020-2023</li>
+                    <li><strong>Research on Model-Parallel Training Based on Device-Cloud Collaboration</strong> - Type: Research - Funding: National Science Foundation - Period: 2025-2028</li>
+                    <li><strong>Research on Key Technologies of Human Walking Wireless Sensing aided by Terminal-Edge Collaboration</strong> - Type: Research - Funding: National Science Foundation - Period: 2022-2024</li>
+                    <!--<li><strong>xxx</strong> - Type: Industry Collaboration - Funding: xxx Corporation - Period: xxxx-xxxx</li>
+                    <li><strong>xxx</strong> - Type: Government Grant - Funding: xxx - Period: xxxx-xxxx</li>-->
                 </ul>
             </div>
         </section>
@@ -94,36 +121,33 @@
             <div class="card">
                 <h2><i class="fas fa-chalkboard-teacher"></i> Teaching</h2>
                 <ul>
-                    <li><strong>Course 1: Introduction to AI and Machine Learning</strong> - Code: CS101 - Semester: Fall 2024</li>
-                    <li><strong>Course 2: Advanced Networking</strong> - Code: CS202 - Semester: Spring 2024</li>
-                    <li><strong>Course 3: Data Science and Big Data Analytics</strong> - Code: CS303 - Semester: Summer 2023</li>
+                    <li><strong>Mathematical Logic</strong> - Semester: Spring 2023, 2024 - West Campus, USTC</li> 
+                    <li><strong>Discrte Mathematics</strong> - Semester: Spring 2022 (with Prof. Hongli Xu)- Online</li>
+                    <li><strong>Algebraic Structure</strong> - Semester: Spring 2021, 2022 (with Prof. Hongli Xu) - Online</li>
+                    <li style="margin-right: 275px;"><strong>Discrte Mathematics and Its Applications</strong> - Semester: Fall 2019 - Suzhou Institute, USTC</li>
                 </ul>
             </div>
         </section>
 
-        <section id="students">
+        <!--<section id="students">
             <div class="card">
                 <h2><i class="fas fa-users"></i> Students</h2>
                 <div class="sub-section">
                     <h3>Ph.D. Students</h3>
                     <ul>
-                        <li><strong>Graduation Year: 2024</strong> - <strong>John Doe</strong> - Employment: Google</li>
-                        <li><strong>Graduation Year: 2023</strong> - <strong>Jane Smith</strong> - Employment: Microsoft</li>
-                        <li><strong>Graduation Year: 2022</strong> - <strong>Alice Johnson</strong> - Employment: Amazon</li>
+                        <li><strong>Graduation Year: xxxx</strong> - <strong>xxx</strong> - Employment: xxx</li>
                     </ul>
                 </div>
                 <div class="sub-section">
                     <h3>Master Students</h3>
                     <ul>
-                        <li><strong>Graduation Year: 2024</strong> - <strong>Bob Brown</strong> - Employment: Facebook</li>
-                        <li><strong>Graduation Year: 2023</strong> - <strong>Charlie Davis</strong> - Employment: Apple</li>
-                        <li><strong>Graduation Year: 2022</strong> - <strong>David Green</strong> - Employment: IBM</li>
+                        <li><strong>Graduation Year: xxxx</strong> - <strong>xxx</strong> - Employment: xxx</li>
                     </ul>
                 </div>
             </div>
-        </section>
+        </section>-->
 		
-        <section id="hobby">
+        <!--<section id="hobby">
             <div class="card">
                 <h2><i class="fas fa-heart"></i> Hobby</h2>
                 <div class="hobby-section">
@@ -147,12 +171,12 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>© 2024 Your Name - All Rights Reserved | <a href="mailto:your.email@example.com">Contact Me</a></p>
+            <p>© 2024 Yang Xu - All Rights Reserved | <a href="mailto:xuyangcs@ustc.edu.cn">Contact Me</a></p>
         </div>
     </footer>
 
