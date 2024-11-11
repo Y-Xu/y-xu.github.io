@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function displayEmail() {
         document.getElementById('email').innerHTML = '<a href="mailto:' + emailAddress + '">' + "Contact Me" + '</a>';
     }
+    
     function toggleMenu() {
         menuToggle.classList.toggle('active');
         
