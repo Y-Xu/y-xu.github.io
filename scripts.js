@@ -5,6 +5,8 @@ var emailAddress = emailParts.join('@');
 function displayEmail() {
     document.getElementById('em1').innerHTML = '<p>Email: ' + emailAddress + '</p>';
     document.getElementById('em2').innerHTML = '<p>© 2024 Yang Xu - All Rights Reserved | <a href="mailto:' + emailAddress + '">Contact Me</a></p>';
+    document.getElementById('pem1').innerHTML = 'Email: ' + emailAddress;
+    document.getElementById('pem2').innerHTML = '© 2024 Yang Xu - All Rights Reserved | <a href="mailto:' + emailAddress + '">Contact Me</a>';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
