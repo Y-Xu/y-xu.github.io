@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     var emailUser = "xuyangcs";
     var emailDomain = "ustc.edu.cn";
-    var emailAddress = emailUser + "@" + emailDomain;
+    var emailParts = [emailUser, emailDomain];
+    var emailAddress = emailParts.join('@');
     function displayEmail() {
         document.getElementById('em1').innerHTML = emailAddress;
         document.getElementById('em2').innerHTML = '<a href="mailto:' + emailAddress + '">Contact Me</a>';
