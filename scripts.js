@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var emailDomain = "ustc.edu.cn";
     var emailAddress = emailUser + "@" + emailDomain;
     function displayEmail() {
-        document.getElementById('email').innerHTML = '<a href="mailto:' + emailAddress + '">' + "Contact Me" + '</a>';
+        document.getElementById('email').innerHTML = '<a href="mailto:' + emailAddress + '">Contact Me</a>';
     }
     
     function toggleMenu() {
