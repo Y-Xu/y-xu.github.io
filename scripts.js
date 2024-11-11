@@ -3,6 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.getElementById('nav-links');
     const overlay = document.getElementById('nav-overlay');
 
+    var emailUser = "xuyangcs";
+    var emailDomain = "ustc.edu.cn";
+    var emailAddress = emailUser + "@" + emailDomain;
+    function displayEmail() {
+        document.getElementById('email').innerHTML = '<a href="mailto:' + emailAddress + '">' + emailAddress + '</a>';
+    }
     function toggleMenu() {
         menuToggle.classList.toggle('active');
         
