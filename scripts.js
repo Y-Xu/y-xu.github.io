@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var emailAddress = emailParts.join('@');
     function displayEmail() {
         document.getElementById('em1').innerHTML = emailAddress;
-        document.getElementById('em2').innerHTML = '<p>© 2024 Yang Xu - All Rights Reserved |<a href="mailto:' + emailAddress + '">Contact Me</a></p>';
+        document.getElementById('em2').innerHTML = '© 2024 Yang Xu - All Rights Reserved |<a href="mailto:' + emailAddress + '">Contact Me</a>';
     }
     
     function toggleMenu() {
