@@ -1,12 +1,10 @@
-var emailUser = "xuyangcs";
-var emailDomain = "ustc.edu.cn";
-var emailParts = [emailUser, emailDomain];
-var emailAddress = emailParts.join('@');
+var emU = "xuyangcs";
+var emD = "ustc.edu.cn";
+var emP = [emU, emD];
+var emA = emP.join('@');
 function displayEmail() {
-    document.getElementById('em1').innerHTML = '<p>Email: ' + emailAddress + '</p>';
-    document.getElementById('em2').innerHTML = '<p>© 2024 Yang Xu - All Rights Reserved | <a href="mailto:' + emailAddress + '">Contact Me</a></p>';
-    document.getElementById('pem1').innerHTML = 'Email: ' + emailAddress;
-    document.getElementById('pem2').innerHTML = '© 2024 Yang Xu - All Rights Reserved | <a href="mailto:' + emailAddress + '">Contact Me</a>';
+    document.getElementById('pem1').innerHTML = 'Email: ' + emA;
+    document.getElementById('pem2').innerHTML = '© 2024 Yang Xu - All Rights Reserved | <a href="mailto:' + emA + '">Contact Me</a>';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
