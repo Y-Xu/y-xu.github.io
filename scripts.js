@@ -1,12 +1,3 @@
-var emU = "xuyangcs";
-var emD = "ustc.edu.cn";
-var emP = [emU, emD];
-var emA = emP.join('@');
-function displayEmail() {
-    document.getElementById('pem1').innerHTML = 'Email: ' + emA;
-    document.getElementById('pem2').innerHTML = '© 2024 Yang Xu - All Rights Reserved | <a href="mailto:' + emA + '">Contact Me</a>';
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('mobile-menu');
     const navLinks = document.getElementById('nav-links');
@@ -53,3 +44,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+var emU = "xuyangcs";
+var emD = "ustc.edu.cn";
+var emP = [emU, emD];
+var emA = emP.join('@');
+function displayEmail() {
+    document.getElementById('pem1').innerHTML = 'Email: ' + emA;
+    document.getElementById('pem2').innerHTML = '© 2024 Yang Xu - All Rights Reserved | <a href="mailto:' + emA + '">Contact Me</a>';
+}
