@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 300); // Match transition duration
         }
         
-        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        // document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     }
 
     // Toggle menu when hamburger is clicked
