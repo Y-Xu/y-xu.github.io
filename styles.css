@@ -12,7 +12,11 @@ body {
   --primary-color: #2a9df4;
   --secondary-color: #ff8c00;
   --background-color-body: #f5fbff;
-  --background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png");
+  /*--background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png"); */
+  /*--background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"); */
+  /*--background-image: url("https://www.transparenttextures.com/patterns/grid-me.png"); */
+  --background-image: url("https://www.transparenttextures.com/patterns/subtle-grey.png");
+  /*--background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); */
   --background-color-main: #ffffff;
   --text-color: #333;
   --hover-transition: 0.2s;
@@ -31,7 +35,9 @@ body {
   --primary-color: #6bb9f0; 
   --secondary-color: #ff9f43; 
   --background-color-body: #000000;
-  --background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png");
+  /*--background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png"); */
+  /*--background-image: url("https://www.transparenttextures.com/patterns/inspiration-geometry.png"); */
+  --background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
   --background-color-main: #1e1e1e;
   --text-color: #e0e0e0; 
   --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
