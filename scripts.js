@@ -53,3 +53,16 @@ function displayEmail() {
     document.getElementById('pem1').innerHTML = 'Email: ' + emA;
     document.getElementById('pem2').innerHTML = '© 2025 Yang Xu - All Rights Reserved | <a href="mailto:' + emA + '">Contact Me</a>';
 }
+const themeButton = document.getElementById('theme-button');
+
+themeButton.addEventListener('click', () => {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  
+  if (currentTheme === 'dark') {
+    document.documentElement.removeAttribute('data-theme');
+    // themeButton.innerHTML = `Light`; // “Light” mode
+  } else {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    // themeButton.innerHTML = `Dark`; // “Dark” mode
+  }
+});
