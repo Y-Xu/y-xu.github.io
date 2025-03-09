@@ -11,7 +11,8 @@ body {
   /* default light theme */
   --primary-color: #2a9df4;
   --secondary-color: #ff8c00;
-  --background-color-body: #f3f8fc;
+  --background-color-body: #f5fbff;
+  --background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png");
   --background-color-main: #ffffff;
   --text-color: #333;
   --hover-transition: 0.2s;
@@ -29,7 +30,8 @@ body {
 [data-theme="dark"] {
   --primary-color: #6bb9f0; 
   --secondary-color: #ff9f43; 
-  --background-color-body: #121212; 
+  --background-color-body: #000000;
+  --background-image: url("https://www.transparenttextures.com/patterns/diagonales-decalees.png");
   --background-color-main: #1e1e1e;
   --text-color: #e0e0e0; 
   --header-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
@@ -39,6 +41,7 @@ body {
   --button-hover-background: #ffffff;
   --button-hover-color: #333;
   --a-color: #4169E1;
+
 }
 
 #theme-toggle {
@@ -54,6 +57,7 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color-body);
+  background-image: var(--background-image);
   margin: 0;
   padding: 0;
 }
@@ -262,13 +266,9 @@ main {
 }
 
 .google-scholar {
-  color: var(--secondary-color);
+  color: var(--secondary-color) !important;
   text-decoration: none;
   transition: color var(--hover-transition);
-}
-
-.google-scholar:hover {
-  color: var(--primary-color);
 }
 
 h2 {
