@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用列表折叠组件</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #2a9df4;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        
+        .card > div {
+            padding: 25px;
+        }
+        
+        .card h2 {
+            background: linear-gradient(135deg, #2a极速df4 0%, #1c7bc7 100%);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+        
+        .card h2 i {
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+        
+        .card p, .card li {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s ease;
+            margin: 0;
+        }
+        
+        .card p:last-child, .card li:last-child {
+            border-bottom: none;
+        }
+        
+        .card p:hover, .card li:hover {
+            background-color: #f9fbfd;
+        }
+        
+        .card p i, .card li i {
+            color: #2a9df4;
+            margin-right: 10px;
+        }
+        
+        .card p strong, .card li strong {
+            color: #2a9df4;
+            margin-right: 5px;
+        }
+        
+        .news-highlight {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        
+        .controls-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 15px;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #2a9df4 0%, #1c7bc7 100%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(42, 157, 244, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(42, 157, 244, 0.4);
+        }
+        
+        .btn i {
+            margin-left: 8px;
+        }
+        
+        .btn.hide {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+        }
+        
+        .btn.hide:hover {
+            box-shadow: 0 6px 15px rgba(231, 76, 60, 0.4);
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .stats span {
+            background: #eef7ff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            margin: 0 5px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .card > div {
+                padding: 15px;
+            }
+            
+            .card p, .card li {
+                padding: 12px 0;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>通用列表折叠组件</h1>
+            <p class="subtitle">支持p标签和li标签的折叠功能</p>
+        </header>
+        
+        <section id="news" class="card">
+            <div>
+                <h2><i class="fas fa-bell"></i> 最新研究动态</h2>
+                <p><i class="fa-solid fa-fire"></i><strong style="color:#2a9df4;">[Jun. 2025]</strong> One paper about
+                    split federated learning with worker clustering and feature compression was accepted by JSAC'25 (CCF A). <span class="news-highlight">Congratulations to Yunming!</span></p>
+                <p><i class="fa-solid fa-fire"></i><strong style="color:#2a9df4;">[Apr. 2025]</strong> One paper about
+                    decentralized federated learning with layer stacking was accepted by Euro-Par'25 (CCF B). <span class="news-highlight">Congratulations to Zhiwei!</span></p>
+                <p><i class="fa-solid fa-fire"></i><strong style="color:#2a9df4;">[Feb. 2025]</strong> One paper about
+                    federated learning with model splitting
+                    and client pairing was accepted by ToN'25 (CCF A). <span class="news-highlight">Congratulations to Zhiwei!</span></p>
+                <p><strong style="color:#2a9df4;">[Jan. 2025]</strong> One paper about
+                    federated learning with layer-wise aggregation over non-IID data was accepted by TSC'25 (CCF A). <span class="news-highlight">Congratulations to Ying Zhu and
+                    Zhiyuan!</span></p>
+                <p><strong style="color:#2a9df4;">[Dec. 2024]</strong> Awesome! One
+                    National Science Foundation of China
+                    (NSFC) Project for Doctoral Students was granted! <span class="news-highlight">Congratulations to Yunming!</span></p>
+                <p><strong style="color:#2a9df4;">[Oct. 2024]</strong> One paper about training slimmable neural network
+                    with federated learning was accepted by ToN'24 (CCF A). <span class="news-highlight">Congratulations to Yunming!</span></p>
+                <p><strong style="color:#2a9df4;">[Aug. 2024]</strong> One National Science Foundation of China (NSFC)
+                    Project was granted!</p>
+                <p><strong style="color:#2a9df4;">[Jun. 2024]</strong> One paper about parallel split federated learning
+                    was accepted by ACM MobiCom 2024 (CCF A). <span class="news-highlight">Congratulations to Yunming!</span></p>
+                <p><strong style="color:#2a9df4;">[May 2024]</strong> One paper about asynchronous decentralized
+                    federated learning was accepted by ToN'24 (CCF A). <span class="news-highlight">Congratulations to Yunming!</span></p>
+            </div>
+        </section>
+        
+        <div class="controls-container" id="news-controls"></div>
+        <div class="stats" id="news-stats"></div>
+        
+        <section id="events" class="card">
+            <div>
+                <h2><i class="fas fa-calendar"></i> 近期活动</h2>
+                <ul>
+                    <li><strong style="color:#2a9df4;">[Sep. 2024]</strong> 参加国际人工智能会议 - 北京</li>
+                    <li><strong style="color:#2a9df4;">[Oct. 2024]</strong> 团队技术分享会 - 线上</li>
+                    <li><strong style="color:#2a9df4;">[Nov. 2024]</strong> 联邦学习研讨会 - 上海</li>
+                    <li><strong style="color:#2a9df4;">[Dec. 2024]</strong> 年度总结会议 - 公司总部</li>
+                    <li><strong style="color:#2a9df4;">[Jan. 2025]</strong> 新技术培训 - 研发中心</li>
+                    <li><strong style="color:#2a9df4;">[Feb. 2025]</strong> 国际学术交流 - 新加坡</li>
+                    <li><strong style="color:#2a9df4;">[Mar. 2025]</strong> 产品发布会 - 深圳</li>
+                    <li><strong style="color:#2a9df4;">[Apr. 2025]</strong> 技术峰会 - 杭州</li>
+                    <li><strong style="color:#2a9df4;">[May 2025]</strong> 团队建设活动 - 三亚</li>
+                </ul>
+            </div>
+        </section>
+        
+        <div class="controls-container" id="events-controls"></div>
+        <div class="stats" id="events-stats"></div>
+    </div>
+
+    <script>
+        /**
+         * 通用列表折叠组件
+         * @param {Object} config - 配置对象
+         * @param {string} config.containerId - 容器元素ID
+         * @param {number} config.defaultShowItems - 默认显示的项目数量
+         * @param {string} config.itemSelector - 项目选择器 (默认为 'p')
+         * @param {string} config.moreText - "显示更多"文本 (默认为 '显示更多')
+         * @param {string} config.lessText - "收起"文本 (默认为 '收起')
+         * @param {boolean} config.showStats - 是否显示统计信息 (默认为 true)
+         */
+        function ListFold(config) {
+            // 参数默认值
+            config = {
+                itemSelector: 'p',
+                moreText: '显示更多',
+                lessText: '收起',
+                showStats: true,
+                ...config
+            };
+            
+            // 获取容器元素
+            const container = document.getElementById(config.containerId);
+            if (!container) {
+                console.error(`容器元素 #${config.containerId} 不存在`);
+                return;
+            }
+            
+            // 获取所有项目
+            const items = container.querySelectorAll(config.itemSelector);
+            const totalItems = items.length;
+            
+            // 如果不需要折叠功能
+            if (config.defaultShowItems >= totalItems) {
+                return;
+            }
+            
+            // 创建样式元素
+            const styleId = `list-fold-style-${config.containerId}`;
+            let style = document.getElementById(styleId);
+            if (!style) {
+                style = document.createElement('style');
+                style.id = styleId;
+                document.head.appendChild(style);
+            }
+            
+            // 添加折叠样式规则
+            style.sheet.insertRule(`
+                #${config.containerId} ${config.itemSelector}:nth-child(n + ${config.defaultShowItems + 1}) {
+                    max-height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    transition: all 0.5s ease;
+                }
+            `, style.sheet.cssRules.length);
+            
+            // 添加展开样式规则
+            style.sheet.insertRule(`
+                #${config.containerId}.show-all ${config.itemSelector}:nth-child(n + ${config.defaultShowItems + 1}) {
+                    max-height: 100px;
+                    opacity: 1;
+                    padding: 15px 0;
+                    margin: 0;
+                }
+            `, style.sheet.cssRules.length);
+            
+            // 创建控制容器
+            const controlsContainer = document.getElementById(`${config.containerId}-controls`);
+            if (!controlsContainer) {
+                console.error(`控制容器 #${config.containerId}-controls 不存在`);
+                return;
+            }
+            
+            // 创建按钮
+            const moreBtn = document.createElement('button');
+            moreBtn.className = 'btn';
+            moreBtn.innerHTML = `${config.moreText} <i class="fas fa-angles-down"></i>`;
+            
+            const lessBtn = document.createElement('button');
+            lessBtn.className = 'btn hide';
+            lessBtn.style.display = 'none';
+            lessBtn.innerHTML = `${config.lessText} <i class="fas fa-angles-up"></i>`;
+            
+            controlsContainer.appendChild(moreBtn);
+            controlsContainer.appendChild(lessBtn);
+            
+            // 创建统计信息
+            let statsContainer, totalSpan, currentSpan;
+            if (config.showStats) {
+                statsContainer = document.getElementById(`${config.containerId}-stats`);
+                if (statsContainer) {
+                    totalSpan = document.createElement('span');
+                    totalSpan.textContent = `总项目数: ${totalItems}`;
+                    
+                    currentSpan = document.createElement('span');
+                    currentSpan.textContent = `当前显示: ${config.defaultShowItems}`;
+                    
+                    statsContainer.appendChild(totalSpan);
+                    statsContainer.appendChild(currentSpan);
+                }
+            }
+            
+            // 事件监听
+            moreBtn.addEventListener('click', function() {
+                container.classList.add('show-all');
+                moreBtn.style.display = 'none';
+                lessBtn.style.display = 'flex';
+                if (currentSpan) currentSpan.textContent = `当前显示: ${totalItems}`;
+            });
+            
+            lessBtn.addEventListener('click', function() {
+                container.classList.remove('show-all');
+                lessBtn.style.display = 'none';
+                moreBtn.style.display = 'flex';
+                if (currentSpan) currentSpan.textContent = `当前显示: ${config.defaultShowItems}`;
+            });
+        }
+        
+        // 初始化页面加载
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化新闻列表
+            ListFold({
+                containerId: 'news',
+                defaultShowItems: 6,
+                itemSelector: 'p',
+                moreText: '显示更多新闻',
+                lessText: '收起新闻'
+            });
+            
+            // 初始化活动列表
+            ListFold({
+                containerId: 'events',
+                defaultShowItems: 5,
+                itemSelector: 'li',
+                moreText: '显示更多活动',
+                lessText: '收起活动'
+            });
+        });
+    </script>
+</body>
+</html>
