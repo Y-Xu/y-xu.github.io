@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
 }
-html{
+html {
   scroll-padding-top: 80px;
 }
 :root {
@@ -31,6 +31,9 @@ html{
   --button-hover-background: #0262c9;
   --button-hover-color: #fff;
   --a-color: blue;
+  --fold-icon-color-active: rgb(255, 140, 0);
+  --fold-icon-color-inactive: rgb(0, 0, 0);
+  --fold-text-color: rgb(0, 0, 0);
 }
 
 /* dark theme */
@@ -50,6 +53,9 @@ html{
   --button-hover-background: #ffffff;
   --button-hover-color: #333;
   --a-color: #4169e1;
+  --fold-icon-color-active: rgb(255, 140, 0);
+  --fold-icon-color-inactive: rgb(255, 255, 255);
+  --fold-text-color: rgb(255, 255, 255);
 }
 
 #theme-toggle {
@@ -403,4 +409,39 @@ footer a:hover {
   display: flex;
   flex-direction: column nowrap;
   align-items: center;
+}
+
+/* ---------------------------------------------------------------- */
+/* 折叠功能相关样式 */
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  color: var(--fold-icon-color-inactive);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.hide {
+  color: var(--fold-icon-color-active);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  color: var(--fold-text-color);
+  font-size: 0.88rem;
+  margin: -5px 20px 0 0;
 }
